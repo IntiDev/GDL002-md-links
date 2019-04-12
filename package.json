@@ -1,4 +1,25 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IntiDev/GDL002-md-links.git"
+  },
+  "author": "IntiDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IntiDev/GDL002-md-links/issues"
+  },
+  "homepage": "https://github.com/IntiDev/GDL002-md-links#readme",
+  "dependencies": {
+    
+  }
 }
