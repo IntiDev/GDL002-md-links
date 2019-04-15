@@ -8,7 +8,12 @@ const validateFormat = (file) =>  {
   return getExtensionFile == 'md' ? true : false;
 };
 
+const readFile = () => {
+  
+}
+
 module.exports = {
   fileExists,
   validateFormat,
+  readFile,
 };

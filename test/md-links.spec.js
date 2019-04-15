@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {fileExists, validateFormat} = require('../src/index.js');
+const {fileExists, validateFormat, readFile} = require('../src/index.js');
 
 describe('File exists', () => {
   it('will be return true when a file exists', () => {
@@ -7,7 +7,7 @@ describe('File exists', () => {
   });
 
   it('will be return false when a file doesnt exists', () => {
-    expect(fileExists('test.md')).toBe(false);
+    expect(fileExists('test.txt')).toBe(false);
   });
 });
 
@@ -24,4 +24,8 @@ describe('Validate format', () => {
   it('isnt a markdown file', () => {
     expect(validateFormat('test.txt')).toBe(false);
   });
+});
+
+describe('Read file', () => {
+  
 });
