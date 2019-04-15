@@ -1,16 +1,16 @@
-// const mdLinks = require('../index.js');
-const {validateFormat} = require('../index.js');
+// const mdLinks = require('../src/index.js');
+const validateFormat = require('../src/index.js');
 
 //Organización de test en grupo
 
 describe('validateFormat', () => {
 
-  test('is a function', () => {    
-    expect(typeof validateFormat).toBe('undefined');
+  it('is a function', () => {    
+    expect(typeof validateFormat).toBe('function');
   });
 
-  it('returns `Prueba`', _ => {
-    expect(validateFormat()).toBe('Prueba');
+  it('returns `prueba`', () => {
+    expect(validateFormat()).toBe('undefined');
   });
 
 });
