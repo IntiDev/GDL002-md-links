@@ -1,4 +1,6 @@
-const pathExists = path;
+const fs = require('fs');
+
+const fileExists = fs.existsSync;
 
 const validateFormat = (file) =>  {
   let getExtensionFile = (/[.]/.exec(file)) ? /[^.]+$/.exec(file)[0] : undefined;
@@ -7,5 +9,6 @@ const validateFormat = (file) =>  {
 };
 
 module.exports = {
-  validateFormat
+  fileExists,
+  validateFormat,
 };
