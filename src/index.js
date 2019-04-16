@@ -11,13 +11,22 @@ const validateFormat = (file) => {
 //    /\[(.?)\]\(.*?\)/gm
 // /^\[.*\]\(.*\)/
 // https://stackoverflow.com/questions/14599071/how-can-i-write-a-javascript-regular-expression-to-replace-hyperlinks-in-this-fo
-// const readFile = (file) => {
-//   fs.readFileSync(file, 'utf8');
-  
-// }
+const readFile = (file) => {
+  return new Promise((resolve, reject) => {
+    fs.readFileSync(file, 'utf8', (error, data) => {
+      if (error) {
+        reject(error);
+      }
+      console.log(data);
+      resolve(data);
+    });
+  });
+};
+
+// readFile('../src/test.md');
 
 module.exports = {
   fileExists,
   validateFormat,
-  // readFile,
+  readFile,
 };

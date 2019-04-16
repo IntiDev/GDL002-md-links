@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {fileExists, validateFormat} = require('../src/index.js');
+const {fileExists, validateFormat, readFile} = require('../src/index.js');
 
 describe('File exists', () => {
   it('will be return true when a file exists', () => {
@@ -26,5 +26,14 @@ describe('Validate format', () => {
 });
 
 describe('Read file', () => {
-
+  it('is a promise', () => {
+    expect(readFile('test.md') instanceof Promise).toBe(true);
+  });
+  
+  it('will be return content', () => {
+    readFile('test.md').then((result) => {
+      console.log(result);
+      expect(result).toBe('Hola');
+    });
+  });
 });
