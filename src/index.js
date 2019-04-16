@@ -8,7 +8,11 @@ const validateFormat = (file) =>  {
   return getExtensionFile == 'md' ? true : false;
 };
 
-const readFile = () => {
+//    /\[(.?)\]\(.*?\)/gm
+// /^\[.*\]\(.*\)/
+//https://stackoverflow.com/questions/14599071/how-can-i-write-a-javascript-regular-expression-to-replace-hyperlinks-in-this-fo
+const readFile = (file, 'utf8') => {
+  
   
 }
 
